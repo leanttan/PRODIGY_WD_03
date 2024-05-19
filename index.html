@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="game-container">
+      <div id="board">
+        <div class="cell" onclick="handleClick(0)"></div>
+        <div class="cell" onclick="handleClick(1)"></div>
+        <div class="cell" onclick="handleClick(2)"></div>
+        <div class="cell" onclick="handleClick(3)"></div>
+        <div class="cell" onclick="handleClick(4)"></div>
+        <div class="cell" onclick="handleClick(5)"></div>
+        <div class="cell" onclick="handleClick(6)"></div>
+        <div class="cell" onclick="handleClick(7)"></div>
+        <div class="cell" onclick="handleClick(8)"></div>
+      </div>
+      <div id="game-info">
+        <div id="player-turn">Player X's Turn</div>
+        <div id="mode-container">
+          <label for="human">Human vs. Human</label>
+          <input
+            type="radio"
+            id="human"
+            name="mode"
+            value="human"
+            checked
+            onchange="handleModeChange()"
+          />
+          <label for="ai">Human vs. AI</label>
+          <input
+            type="radio"
+            id="ai"
+            name="mode"
+            value="ai"
+            onchange="handleModeChange()"
+          />
+        </div>
+        <button onclick="resetBoard()">Reset</button>
+        <div id="score">Score - Player X: 0 | Player O: 0</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
